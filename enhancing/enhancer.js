@@ -6,7 +6,12 @@ module.exports = {
 };
 
 function succeed(item) {
-  return { ...item };
+  const newItem = {
+    name: item.name,
+    durability: item.durability,
+    enhancement: item.enhancement + 1,
+ }
+ return newItem
 }
 
 function fail(item) {
@@ -26,14 +31,14 @@ function get(item) {
   return { ...item };
 }
 
-function objChecker(item) {
-  if (item && typeof item === 'object') {
-    const objProp = Object.getOwnPropertyNames(item);
-    const objNames = ["name", "durability", "enhancement"];
-  } else {
-    return null;
-  }
-}
+// function objChecker(item) {
+//   if (item && typeof item === 'object') {
+//     const objProp = Object.getOwnPropertyNames(item);
+//     const objNames = ["name", "durability", "enhancement"];
+//   } else {
+//     return null;
+//   }
+// }
 
 function arraysEqual(a, b) {
   if (a === b) return true;

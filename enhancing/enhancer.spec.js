@@ -4,15 +4,42 @@ const {succeed, fail, repair, get} = require('./enhancer.js');
 describe('enhancing.js', () => {
 //============================================ succeed Tests 
 
-    // describe('succeed()', () => {
-    //     it('', () => {})
-    // })
+    describe('succeed()', () => {
+        it('should return item enhancement increases by 1', () => {
+            const item = {
+                name: "Ethan",
+                durability: 85,
+                enhancement: 15
+              };
+        
+              // arrange
+              const expected = {
+                name: "Ethan",
+                durability: 85,
+                enhancement: 16
+              };
+        
+              // act
+              const repairSucceeded = succeed(item);
+        
+              // assert
+              expect(repairSucceeded).toEqual(expected);
+        })
+
+        xit('should return unchanged if item enhancement level is 20', () => {})
+
+        xit('should return unchanged durability of the item', () => {})
+    })
 
 //============================================ fail Tests
 
-    // describe('fail()', () => {
-    //     it('', () => {})
-    // })
+    describe('fail()', () => {
+        xit('should lower durability of the item by 5 if enhancement is less than 15, ', () => {})
+
+        xit('should decrease the durability of the item by 10, if enhancment is 15 or more', () => {})
+
+        xit('should decrease the enhancement level by 1 if enhancment level is greater than 16', () => {})
+    })
 
 //============================================ repair Tests
 
