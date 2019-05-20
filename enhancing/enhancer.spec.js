@@ -1,26 +1,33 @@
 const {succeed, fail, repair, get} = require('./enhancer.js');
 // test away!
-//============================================ succeed Tests
+
 describe('enhancing.js', () => {
-    describe('succeed()', () => {
-        it.todo('', () => {})
-    })
+//============================================ succeed Tests 
+
+    // describe('succeed()', () => {
+    //     it('', () => {})
+    // })
 
 //============================================ fail Tests
 
-    describe('fail()', () => {
-        it.todo('', () => {})
-    })
+    // describe('fail()', () => {
+    //     it('', () => {})
+    // })
 
 //============================================ repair Tests
 
     describe('repair()', () => {
-        it.todo('', () => {})
+        it('should restore durability to 100', () => {
+            
+        })
+        it.todo('should return null with no arguments')
+        it.todo('should return when not passed a valid argument')
     })
 
 //============================================ get Tests
 
-    describe('get()', () => {
-        it.todo('', () => {})
-    })
+    // describe('get()', () => {
+    //     it('', () => {})
+    // })
+
 })
