@@ -91,7 +91,20 @@ describe("enhancing.js", () => {
           expect(failItem).toEqual(expected);
     });
 
-    xit("should decrease the enhancement level by 1 if enhancment level is greater than 16", () => {});
+    it("should decrease the enhancement level by 1 if enhancment level is greater than 16", () => {
+        const item = {
+            name: "Ethan",
+            durability: 85,
+            enhancement: 16
+          };
+          const expected = {
+            name: "Ethan",
+            durability: 75,
+            enhancement: 15
+          };
+          const failItem = fail(item);
+          expect(failItem).toEqual(expected);
+    });
   });
 
   //============================================ repair Tests
