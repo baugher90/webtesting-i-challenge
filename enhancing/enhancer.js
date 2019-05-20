@@ -14,7 +14,12 @@ function fail(item) {
 }
 
 function repair(item) {
-  return { ...item };
+  const newItem = {
+    name: item.name,
+    durability: 100,
+    enhancement: item.enhancement,
+ }
+ return newItem
 }
 
 function get(item) {
@@ -22,7 +27,6 @@ function get(item) {
 }
 
 function objChecker(item) {
-  return 
   if (item && typeof item === 'object') {
     const objProp = Object.getOwnPropertyNames(item);
     const objNames = ["name", "durability", "enhancement"];

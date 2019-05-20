@@ -18,7 +18,24 @@ describe('enhancing.js', () => {
 
     describe('repair()', () => {
         it('should restore durability to 100', () => {
-            
+            const item = {
+                name: "strider",
+                durability: 85,
+                enhancement: 15
+              };
+        
+              // arrange
+              const expected = {
+                name: "strider",
+                durability: 100,
+                enhancement: 15
+              };
+        
+              // act
+              const repairedItem = repair(item);
+        
+              // assert
+              expect(repairedItem).toEqual(expected);
         })
         it.todo('should return null with no arguments')
         it.todo('should return when not passed a valid argument')
