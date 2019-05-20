@@ -61,7 +61,7 @@ describe("enhancing.js", () => {
   //============================================ fail Tests
 
   describe("fail()", () => {
-    it("should lower durability of the item by 5 if enhancement is less than 15, ", () => {
+    it("should lower durability of the item by 5 if enhancement is less than 15", () => {
         const item = {
             name: "Ethan",
             durability: 85,
@@ -89,7 +89,6 @@ describe("enhancing.js", () => {
           };
           const failItem = fail(item);
           expect(failItem).toEqual(expected);
-    });
     });
 
     xit("should decrease the enhancement level by 1 if enhancment level is greater than 16", () => {});
