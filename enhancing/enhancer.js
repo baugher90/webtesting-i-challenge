@@ -21,6 +21,15 @@ function get(item) {
   return { ...item };
 }
 
+function objChecker(item) {
+  return 
+  if (item && typeof item === 'object') {
+    const objProp = Object.getOwnPropertyNames(item);
+    const objNames = ["name", "durability", "enhancement"];
+  } else {
+    return null;
+  }
+}
 
 function arraysEqual(a, b) {
   if (a === b) return true;
