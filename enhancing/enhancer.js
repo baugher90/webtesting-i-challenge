@@ -2,32 +2,42 @@ module.exports = {
   succeed,
   fail,
   repair,
-  get,
+  get
 };
-
+//===============================
 function succeed(item) {
- const enhancedItem = item.enhancement < 20 ? item.enhancement+1 : item.enhancement;
- const newItem = {
-  name: item.name,
-  durability: item.durability,
-  enhancement: enhancedItem,
+  const enhancedItem =
+    item.enhancement < 20 ? item.enhancement + 1 : item.enhancement;
+  const newItem = {
+    name: item.name,
+    durability: item.durability,
+    enhancement: enhancedItem
+  };
+  return newItem;
 }
-return newItem
-}
-
+//===============================
 function fail(item) {
-  return { ...item };
+  if(item.enhancement<=15){
+  const newItem = {
+      name: item.name,
+      durability: item.durability - 5,
+      enhancement: item.enhancement
+    };
+    return newItem;
+  }
+  
+  
 }
-
+//===============================
 function repair(item) {
   const newItem = {
     name: item.name,
     durability: 100,
-    enhancement: item.enhancement,
- }
- return newItem
+    enhancement: item.enhancement
+  };
+  return newItem;
 }
-
+//===============================
 function get(item) {
   return { ...item };
 }
