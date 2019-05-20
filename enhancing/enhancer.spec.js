@@ -26,7 +26,26 @@ describe('enhancing.js', () => {
               expect(repairSucceeded).toEqual(expected);
         })
 
-        xit('should return unchanged if item enhancement level is 20', () => {})
+        it('should return unchanged if item enhancement level is 20', () => {
+            const item = {
+                name: "Ethan",
+                durability: 85,
+                enhancement: 20
+              };
+        
+              // arrange
+              const expected = {
+                name: "Ethan",
+                durability: 85,
+                enhancement: 20
+              };
+        
+              // act
+              const repairSucceeded = succeed(item);
+        
+              // assert
+              expect(repairSucceeded).toEqual(expected);
+        })
 
         xit('should return unchanged durability of the item', () => {})
     })

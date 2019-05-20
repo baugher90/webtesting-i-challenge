@@ -6,12 +6,13 @@ module.exports = {
 };
 
 function succeed(item) {
-  const newItem = {
-    name: item.name,
-    durability: item.durability,
-    enhancement: item.enhancement + 1,
- }
- return newItem
+ const enhancedItem = item.enhancement < 20 ? item.enhancement+1 : item.enhancement;
+ const newItem = {
+  name: item.name,
+  durability: item.durability,
+  enhancement: enhancedItem,
+}
+return newItem
 }
 
 function fail(item) {
